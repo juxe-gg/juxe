@@ -6,7 +6,7 @@
 <title>JUXE — L'illusion du multi en solo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://www.paypal.com/sdk/js?client-id=BAAB5s8y46WTPIhn9czvBQG7QqAyyWfDvngIQ7idbx7ZzpYef43vB03T33gUKDETD_M7S-mw_yY1xtpI08&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+
 <style>
 :root {
   --gold:#C9A84C;--gold2:#F0D88C;--gold-dim:rgba(201,168,76,0.15);--gold-glow:rgba(201,168,76,0.06);
@@ -189,6 +189,27 @@ footer{padding:56px 48px 36px;border-top:1px solid var(--border);display:flex;al
   footer{padding:40px 20px;flex-direction:column;align-items:flex-start;}
   .divider{margin:0 20px;}
 }
+
+.gumroad-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 6px 24px rgba(201,168,76,0.25);
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+.gumroad-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(201,168,76,0.4); }
+.gumroad-btn svg { width: 15px; height: 15px; }
 </style>
 </head>
 <body>
@@ -360,7 +381,7 @@ footer{padding:56px 48px 36px;border-top:1px solid var(--border);display:flex;al
           <div class="offer-feat">Guide d'installation PDF</div>
           <div class="offer-feat">Compatible Story Mode &amp; FiveM</div>
         </div>
-        <a href="#buy" class="offer-btn offer-btn-gold">Acheter maintenant</a>
+        <a href="https://juxe.gumroad.com/l/juxe" target="_blank" class="offer-btn offer-btn-gold">Acheter maintenant</a>
       </div>
       <div class="offer featured reveal reveal-delay-2">
         <div class="offer-corner">Populaire</div>
@@ -418,11 +439,14 @@ footer{padding:56px 48px 36px;border-top:1px solid var(--border);display:flex;al
           <div class="buy-price-num">29</div>
           <div class="buy-price-cur">EUR</div>
         </div>
-        <div class="buy-price-label">Paiement unique · Accès immédiat</div>
-        <div id="paypal-container-4SA4U9D28EMXJ"></div>
+        <div class="buy-price-label">Paiement unique · Livraison automatique</div>
+        <a href="https://juxe.gumroad.com/l/juxe" target="_blank" class="gumroad-btn">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7.5h9M8 3l4 4.5-4 4.5"/></svg>
+          Acheter maintenant — 29€
+        </a>
         <div class="buy-secure">
           <svg width="12" height="13" viewBox="0 0 12 13" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="5" width="10" height="7" rx="2"/><path d="M4 5V3.5a2 2 0 014 0V5"/></svg>
-          Paiement sécurisé via PayPal
+          Paiement sécurisé · Livraison immédiate par email
         </div>
       </div>
     </div>
@@ -486,7 +510,7 @@ function toggleFaq(btn){const item=btn.parentElement,open=item.classList.contain
 function openLightbox(el){const img=el.querySelector('img');document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('open');}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
-paypal.HostedButtons({hostedButtonId:"4SA4U9D28EMXJ"}).render("#paypal-container-4SA4U9D28EMXJ");
+
 </script>
 </body>
 </html>
